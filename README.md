@@ -21,7 +21,7 @@ Returns a pandas.DataFrame() with the samples as the index and the cell types as
 
 Possible errors thrown are `FileNotFound`, if 'test.txt' does not exist, or a generic `Exception`, if there was an error in the R processing.
 
-epicpy requires console access, as it calls Rscript from the shell. Additionally, it needs write access to the folder it's in.
-Note that it creates/writes and deletes /temp.txt in the folder it acts in. It will be updated to use a better filename if I get around to it.
+epicpy requires console access, as it calls `Rscript` from the shell. Additionally, it needs write access to the folder it's in.
+Note that it creates/writes and deletes the file `/temp.txt` in the folder it acts in. It will be updated to use a better filename if I get around to it.
 
 Feature creation by request.
