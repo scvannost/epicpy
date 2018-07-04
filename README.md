@@ -1,11 +1,9 @@
 # epicpy
 A python wrapper for the EPIC cell type-identifying R library
 
-Since http://epic.gfellerlab.org/ wasn't working for me and I didn't want to deal with R, I wrote a python wrapper for the R library that returns the cell type fractions using the default reference set of EPIC.
-
 Only the python file is necessary, as it will generate the R file if it does not exist. 
 
-I am not in any way affiliated with the Gfeller lab or Ludwig Institute for Cancer Research Ltd, nor claim any ownership of EPIC nor license on this wrapper beyond what is required.
+I am not in any way affiliated with the Gfeller lab or Ludwig Institute for Cancer Research Ltd, nor claim any ownership of EPIC nor license on this wrapper beyond what is required. Commercial users are requested to obtain a license from the developers of EPIC.
 
 ## Instructions
 ```python
