@@ -1,6 +1,9 @@
 # epicpy
 A python wrapper for the EPIC cell type-identifying R library
 
+Original EPIC sofware: https://github.com/GfellerLab/EPIC
+Paper: https://doi.org/10.7554/eLife.26476.001
+
 Only the python file is necessary, as it will generate the R file if it does not exist. 
 
 I am not in any way affiliated with the Gfeller lab or Ludwig Institute for Cancer Research Ltd, nor claim any ownership of EPIC nor license on this wrapper beyond what is required. Commercial users are requested to obtain a license from the developers of EPIC.
