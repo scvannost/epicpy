@@ -2,6 +2,7 @@
 A python wrapper for the EPIC cell type-identifying R library
 
 Original EPIC sofware: https://github.com/GfellerLab/EPIC
+
 Paper: https://doi.org/10.7554/eLife.26476.001
 
 Only the python file is necessary, as it will generate the R file if it does not exist. 
