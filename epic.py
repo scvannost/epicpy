@@ -1,11 +1,18 @@
 import os, pandas, subprocess
 
-def epic(file:str):
+def epic(file:str, sep='\t'):
 	if not os.path.isfile(file):
 		return FileNotFoundError('File '+file+' cannot be found.')
 	if not os.path.isfile('epic.R'):
 		with open('epic.R','w') as f:
 			f.write(r_code)
+
+	temp = pd.read_csv(file,sep=sep,index_col=0)
+	if not len(set(temp.index.values)) == len(temp.index.values):
+		return ValueError('You must not have duplicate row (i.e. gene) names.')
+	elif sep != '\t':
+		with open(file,'w') as f:
+			f.write(temp.to_csv(sep='\t'))
 
 	cmd = 'Rscript epic.R ' + file + ' temp.txt'
 	err = subprocess.run(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE).stdout
@@ -14,6 +21,10 @@ def epic(file:str):
 
 	out = pandas.read_csv('temp.txt',sep='\t',header=0,index_col=0)
 	os.remove('temp.txt')
+
+	if sep != '\t':
+		with open(file,'w') as f:
+			f.write(temp.to_csv(sep=sep))
 
 	return out
 
