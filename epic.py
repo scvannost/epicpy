@@ -7,7 +7,7 @@ def epic(file:str, sep='\t'):
 		with open('epic.R','w') as f:
 			f.write(r_code)
 
-	temp = pd.read_csv(file,sep=sep,index_col=0)
+	temp = pandas.read_csv(file,sep=sep,index_col=0)
 	if not len(set(temp.index.values)) == len(temp.index.values):
 		return ValueError('You must not have duplicate row (i.e. gene) names.')
 	elif sep != '\t':
